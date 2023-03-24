@@ -24,3 +24,30 @@ const assertArraysEqual = function(actual, expected) {
     console.log(`🛑🛑🛑 Assertion Failed: [${actual}] !== [${expected}]`);
   }
 };
+
+const flatten = function(arr){
+   let flatArr = [];
+   for (let element of arr) {
+    if (Array.isArray(element)){
+        for (let subElement of element) {
+            flatArr.push(subElement);
+        }
+    } else {
+        flatArr.push(element);
+    }
+   } 
+   return flatArr;
+}
+
+assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]); // should pass
+assertArraysEqual(flatten([1, [2, [3, [4]]]]), [1, 2, [3, [4]]]); // should fail
+
+
+// const flatten = function(arr) {
+//   return arr.map(element => {
+//     if (Array.isArray(element)) {
+//       return element.flat();
+//     }
+//     return element;
+//   }).flat();
+// };
