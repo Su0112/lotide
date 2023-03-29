@@ -10,7 +10,7 @@ const assertEqual = function(actual, expected) {
 };
 
 function countLetters(sentence) {
-  const counts = {};
+  const counts = {}; //initial count
   
   for (let i = 0; i < sentence.length; i++) {
     const letter = sentence[i];
@@ -24,7 +24,7 @@ function countLetters(sentence) {
     }
   }
   
-  console.log('counts', counts);
+  //console.log('counts', counts);
   return counts;
 }
 
