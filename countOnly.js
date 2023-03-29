@@ -19,7 +19,6 @@ const countOnly = function(allItems, itemsToCount) {
 // increment the counter for each item:
 //   set a property with that string key to:
 //     the value that was already there (or zero if nothing there) with 1 added to it.
-// inside the loop:
 if (itemsToCount[item]) { 
   if (results[item]) {
     results[item] += 1;
@@ -28,7 +27,7 @@ if (itemsToCount[item]) {
   }
 }
   }
-console.log("results", results)
+//console.log("results", results)
   return results;
 }
 const firstNames = [
