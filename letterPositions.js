@@ -40,5 +40,5 @@ function letterPositions(sentence){
   }
   return results;
 }
-
+console.log(letterPositions("lighthouse in the house"));
 assertArraysEqual(letterPositions("hello").e, [1]);
