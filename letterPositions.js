@@ -25,7 +25,7 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-function letterPositons(sentence){
+function letterPositions(sentence){
   const position = {};
   //logic
   for (let i = 0; i < sentence.length; i++){
@@ -41,4 +41,4 @@ function letterPositons(sentence){
   return position;
 }
 
-letterPositons("Lighthouse")
+assertArraysEqual(letterPositions("hello").e, [1]);
