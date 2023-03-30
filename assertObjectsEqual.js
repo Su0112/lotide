@@ -22,6 +22,7 @@ const assertEqual = function (actual, expected) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
   }
 };
+
 const shirtObject = { color: "red", size: "medium" };
 const anotherShirtObject = { size: "medium", color: "red" };
 const longSleeveShirtObject = {
@@ -29,7 +30,6 @@ const longSleeveShirtObject = {
   color: "red",
   sleeveLength: "long",
 };
-
 const eqObjects = function (object1, object2) {
   let keys1 = Object.keys(object1);
   let keys2 = Object.keys(object2);
@@ -47,27 +47,15 @@ const eqObjects = function (object1, object2) {
   }
   return true;
 };
+
 eqObjects(shirtObject, anotherShirtObject); // => true
 assertEqual(eqObjects(shirtObject, anotherShirtObject), true);
+
 
 eqObjects(shirtObject, longSleeveShirtObject); // => false
 assertEqual(eqObjects(shirtObject, longSleeveShirtObject), false);
 
-
-//Alternative way of doing it without eqArrays
-// const eqObjects = function (object1, object2) {
-//   const keys1 = Object.keys(object1);
-//   const keys2 = Object.keys(object2);
-//   //console.log(keys1, keys2);
-
-//   if (keys1.length !== keys2.length) {
-//     return false;
-//   } // firs step is to check if the number of the keys are equal
-//   for (const key of keys1) {
-//     if (keys1[key] !== keys2[key]) {
-//       return false; // to check if the items are equal
-//     }
-
-//   }
-//   return true;
-// }
+// FUNCTION IMPLEMENTATION
+const assertObjectsEqual = function (actual, expected) {
+  // Implement me!
+};
