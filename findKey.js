@@ -1,6 +1,6 @@
 // FUNCTION IMPLEMENTATION
 
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   if (actual != expected) {
     console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`)
   } else {
@@ -33,3 +33,4 @@ assertEqual(findKey({
 
 
 //Output: ✅✅✅ Assertion Passed: noma === noma
+module.exports = findKey;

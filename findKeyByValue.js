@@ -1,15 +1,15 @@
 // FUNCTION IMPLEMENTATION
 
 const assertEqual = function(actual, expected) {
-    if (actual != expected){
-        console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`)
-    } else {
-        console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`)
-    }
+  if (actual != expected) {
+    console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`)
+  } else {
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`)
+  }
 
 };
 
-function findKeyByValue(object, value){
+function findKeyByValue(object, value) {
   for (const key of Object.keys(object)) {
     if (object[key] === value) {
       return key;
@@ -26,12 +26,13 @@ function findKeyByValue(object, value){
 //   three: 3
 // };
 
-const bestTVShowsByGenre = { 
+const bestTVShowsByGenre = {
   sci_fi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
-  drama:  "The Wire"
+  drama: "The Wire"
 };
 //console.log(findKeyByValue(numbers, 3))
 //console.log(findKeyByValue(bestTVShowsByGenre, "The Wire"))
 assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
 assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+module.exports = findKeyByValue;

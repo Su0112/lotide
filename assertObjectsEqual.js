@@ -15,7 +15,7 @@ function eqArrays(arr1, arr2) {
   return true;
 }
 
-const eqObjects = function (object1, object2) {
+const eqObjects = function(object1, object2) {
   let keys1 = Object.keys(object1);
   let keys2 = Object.keys(object2);
   if (keys1.length !== keys2.length) {
@@ -33,7 +33,7 @@ const eqObjects = function (object1, object2) {
   return true;
 };
 // FUNCTION IMPLEMENTATION
-const assertObjectsEqual = function (actual, expected) {
+const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect; // <= add this line to import the library so that the function can use it.
   console.log(`Example label: ${inspect(actual)}`);
   if (eqObjects(actual, expected)) {
@@ -48,3 +48,5 @@ const object3 = { a: 1, b: 3 };
 
 assertObjectsEqual(object1, object2); // should pass
 assertObjectsEqual(object1, object3); // should fail
+
+module.exports = assertObjectsEqual;

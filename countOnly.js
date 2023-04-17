@@ -1,11 +1,11 @@
 // FUNCTION IMPLEMENTATION
 
 const assertEqual = function(actual, expected) {
-    if (actual != expected){
-        console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`)
-    } else {
-        console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`)
-    }
+  if (actual != expected) {
+    console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`)
+  } else {
+    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`)
+  }
 
 };
 // allItems: an array of strings that we need to look through
@@ -16,18 +16,18 @@ const countOnly = function(allItems, itemsToCount) {
   for (const item of allItems) {
     //console.log(item);
     // inside the loop, 
-// increment the counter for each item:
-//   set a property with that string key to:
-//     the value that was already there (or zero if nothing there) with 1 added to it.
-if (itemsToCount[item]) { 
-  if (results[item]) {
-    results[item] += 1;
-  } else {
-    results[item] = 1;
+    // increment the counter for each item:
+    //   set a property with that string key to:
+    //     the value that was already there (or zero if nothing there) with 1 added to it.
+    if (itemsToCount[item]) {
+      if (results[item]) {
+        results[item] += 1;
+      } else {
+        results[item] = 1;
+      }
+    }
   }
-}
-  }
-//console.log("results", results)
+  //console.log("results", results)
   return results;
 }
 const firstNames = [
@@ -48,3 +48,5 @@ assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);
 assertEqual(result1["Fang"], 2);
 assertEqual(result1["Agouhanna"], undefined);
+
+module.exports = countOnly;

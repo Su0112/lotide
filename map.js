@@ -15,7 +15,7 @@ function eqArrays(arr1, arr2) {
   return true;
 }
 
-const assertArraysEqual = function (actual, expected) {
+const assertArraysEqual = function(actual, expected) {
   if (eqArrays(actual, expected)) {
     console.log(`✅✅✅ Assertion Passed: [${actual}] === [${expected}]`);
   } else {
@@ -26,7 +26,7 @@ const assertArraysEqual = function (actual, expected) {
 
 //Implementation of map and call backs
 const words = ["ground", "control", "to", "major", "tom"];
-const map = function (array, callback) {
+const map = function(array, callback) {
   //console.log("array:", array)
   //console.log("callback:", callback)
   const results = [];
@@ -49,3 +49,5 @@ const words2 = ["red", "blue", "pink", "black"];
 assertArraysEqual(map(words1, (word) => word[0]), ["g", "c", "t", "m", "t"]);
 assertArraysEqual(map(words2, (word) => word.length), [5, 6, 6, 4]);
 assertArraysEqual(map(words2, (word) => word.length), [3, 4, 4, 5]);
+
+module.exports = map;

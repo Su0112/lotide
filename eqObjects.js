@@ -15,7 +15,7 @@ function eqArrays(arr1, arr2) {
   return true;
 }
 
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   if (actual != expected) {
     console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
   } else {
@@ -30,7 +30,7 @@ const longSleeveShirtObject = {
   sleeveLength: "long",
 };
 
-const eqObjects = function (object1, object2) {
+const eqObjects = function(object1, object2) {
   let keys1 = Object.keys(object1);
   let keys2 = Object.keys(object2);
   if (keys1.length !== keys2.length) {
@@ -53,7 +53,7 @@ assertEqual(eqObjects(shirtObject, anotherShirtObject), true);
 eqObjects(shirtObject, longSleeveShirtObject); // => false
 assertEqual(eqObjects(shirtObject, longSleeveShirtObject), false);
 
-
+module.exports = eqObjects;
 //Alternative way of doing it without eqArrays
 // const eqObjects = function (object1, object2) {
 //   const keys1 = Object.keys(object1);

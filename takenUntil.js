@@ -15,7 +15,7 @@ function eqArrays(arr1, arr2) {
   return true;
 }
 
-const assertArraysEqual = function (actual, expected) {
+const assertArraysEqual = function(actual, expected) {
   if (eqArrays(actual, expected)) {
     console.log(`✅✅✅ Assertion Passed: [${actual}] === [${expected}]`);
   } else {
@@ -28,7 +28,7 @@ It will take in two parameters as well:
 
 The array to work with
 The callback(which Lodash calls "predicate") */
-const takeUntil = function (array, callback) {
+const takenUntil = function(array, callback) {
   const result = [];
   for (const item of array) {
     if (callback(item)) {
@@ -42,16 +42,16 @@ const takeUntil = function (array, callback) {
 
 // Test Case 1
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
-const results1 = takeUntil(data1, x => x < 0);
+const results1 = takenUntil(data1, x => x < 0);
 assertArraysEqual(results1, [1, 2, 5, 7, 2]);
 console.log('---');
 
 // Test Case 2
 const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
-const results2 = takeUntil(data2, x => x === ',');
+const results2 = takenUntil(data2, x => x === ',');
 assertArraysEqual(results2, ["I've", "been", "to", "Hollywood"]);
 
-
+module.exports = takenUntil;
 /*
 const takeUntil = function(array, callback) {
   const result = [];

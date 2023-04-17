@@ -25,12 +25,12 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-function letterPositions(sentence){
+function letterPositions(sentence) {
   const results = {};
   //logic
-  for (let i = 0; i < sentence.length; i++){
-        //condional statement to count letters
-      if (sentence[i] !== ' ') { //if the current character is not a space or empty:
+  for (let i = 0; i < sentence.length; i++) {
+    //condional statement to count letters
+    if (sentence[i] !== ' ') { //if the current character is not a space or empty:
       if (results[sentence[i]]) { // if the counts object already has an entry for this character:
         results[sentence[i]].push(i);
       } else {
@@ -42,3 +42,5 @@ function letterPositions(sentence){
 }
 console.log(letterPositions("lighthouse in the house"));
 assertArraysEqual(letterPositions("hello").e, [1]);
+
+module.exports = letterPositions;
