@@ -22,19 +22,16 @@ const assertArraysEqual = function(actual, expected) {
     console.log(`🛑🛑🛑 Assertion Failed: [${actual}] !== [${expected}]`);
   }
 };
-/*We will be implementing a function quite similar to this one, but isn't present in their library: takeUntil.
 
-It will take in two parameters as well:
-
-The array to work with
-The callback(which Lodash calls "predicate") */
 const takenUntil = function(array, callback) {
   const result = [];
   for (const item of array) {
     if (callback(item)) {
-      return result; // for truthy value, current item is returned with the prev iteration result
+      return result;
+      // for truthy value, current item is returned with the prev iteration result
     }
-    result.push(item); //for a falsy value, add item to the end of the result
+    result.push(item);
+    //for a falsy value, add item to the end of the result
   }
   return result;
 };
@@ -52,16 +49,3 @@ const results2 = takenUntil(data2, x => x === ',');
 assertArraysEqual(results2, ["I've", "been", "to", "Hollywood"]);
 
 module.exports = takenUntil;
-/*
-const takeUntil = function(array, callback) {
-  const result = [];
-  for (let i = 0; i < array.length; i++) {
-    const item = array[i];
-    if (callback(item)) {
-      return result;
-    }
-    result.push(item);
-  }
-  return result;
-};
- */
