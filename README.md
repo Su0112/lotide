@@ -31,7 +31,7 @@ The following functions are currently implemented:
 - `middle(...)`: A function that takes in an array and returns the middle element in the array.
 - `assertArraysEqual(...)`: A function that takes two arrays and checks if two arrays are equals.
 - `assertEqual(...)`: A function that takes in 2 values and returns true if they are equal and false otherwise.
-- `assertObjectsEqual(...)`:
+- `assertObjectsEqual(...)`: A function that takes in 2 objects and returns true if they are equal and false otherwise.
 - `countLetters(...)`: A function that takes in a sentence and returns a count of each of the letters in the sentence.
 - `countOnly(...)`: A function that takes in a collection of items and returns a specific subset of those items.
 - `eqArrays(...)`: A function that takes in 2 arrays and returns true if the arrays are equal and false otherwise.
