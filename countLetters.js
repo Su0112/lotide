@@ -7,7 +7,7 @@ function countLetters(sentence) {
     //condional statement to count letters
     //if the current character is not a space or empty
     if (letter !== ' ') {
-      // if the counts object already has an entry for this character:
+      // if the counts object already has an entry for this character
       if (counts[letter]) {
         //increment the count of the current character by 1
         counts[letter]++;
