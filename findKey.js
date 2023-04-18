@@ -1,14 +1,4 @@
 // FUNCTION IMPLEMENTATION
-
-const assertEqual = function(actual, expected) {
-  if (actual != expected) {
-    console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`)
-  } else {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`)
-  }
-
-};
-
 function findKey(object, callback) {
   // scan, write a for loop
   for (let key in object) {
@@ -17,20 +7,19 @@ function findKey(object, callback) {
       return key;
     }
   }
-  return undefined; //if no key then return undefined
+  return undefined;
+  //if no key then return undefined
 };
 
 
 
-assertEqual(findKey({
+findKey({
   "Blue Hill": { stars: 1 },
   "Akaleri": { stars: 3 },
   "noma": { stars: 2 },
   "elBulli": { stars: 3 },
   "Ora": { stars: 2 },
   "Akelarre": { stars: 3 }
-}, x => x.stars === 2), "noma");
+}, x => x.stars === 2);
 
-
-//Output: ✅✅✅ Assertion Passed: noma === noma
 module.exports = findKey;

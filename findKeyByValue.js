@@ -20,19 +20,12 @@ function findKeyByValue(object, value) {
 }
 
 
-// const numbers = { 
-//   one: 1,
-//   two: 2,
-//   three: 3
-// };
-
 const bestTVShowsByGenre = {
   sci_fi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
   drama: "The Wire"
 };
-//console.log(findKeyByValue(numbers, 3))
-//console.log(findKeyByValue(bestTVShowsByGenre, "The Wire"))
+
 assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
 assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
 module.exports = findKeyByValue;

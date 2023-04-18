@@ -1,4 +1,3 @@
-const assertEqual = require('./assertEqual');
 // FUNCTION IMPLEMENTATION
 const head = function(arr) {
   for (let i = 0; i < arr.length; i++) {

@@ -34,8 +34,8 @@ const eqObjects = function(object1, object2) {
 };
 // FUNCTION IMPLEMENTATION
 const assertObjectsEqual = function(actual, expected) {
-  const inspect = require('util').inspect; // <= add this line to import the library so that the function can use it.
-  console.log(`Example label: ${inspect(actual)}`);
+  //this line to import the library so that the function can use it
+  const inspect = require('util').inspect;
   if (eqObjects(actual, expected)) {
     console.log(`✅✅✅ Assertion Passed: [${inspect(actual)}] === [${inspect(expected)}]`);
   } else {

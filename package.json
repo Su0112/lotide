@@ -1,11 +1,8 @@
 {
   "name": "@sushruthi/lotide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A mini clone of the [Lodash](https://lodash.com) library (project created and published by me as part of my learnings at Lighthouse Labs)",
-  "main": "main.js",
-  "directories": {
-    "test": "test"
-  },
+  "main": "index.js",
   "scripts": {
     "test": "mocha"
   },

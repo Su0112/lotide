@@ -4,9 +4,9 @@ const tail = require('../tail');
 
 
 describe("#tail", () => {
-  const tailWords = ["Yo Yo", "Lighthouse", "Labs"];
-  it("returns 3 for words.length", () => {
-    assert.strictEqual(tailWords.length, 3);
+  const input = [1, 2, 3];
+  it("returns 2 for given input", () => {
+    assert.strictEqual(tail(input).length, 2);
   });
 
 });
