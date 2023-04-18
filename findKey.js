@@ -7,12 +7,9 @@ function findKey(object, callback) {
       return key;
     }
   }
-  return undefined;
   //if no key then return undefined
+  return undefined;
 };
-
-
-
 findKey({
   "Blue Hill": { stars: 1 },
   "Akaleri": { stars: 3 },

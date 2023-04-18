@@ -4,5 +4,4 @@ const tail = function(arr) {
     return newArray;
 }
 
-
 module.exports = tail;

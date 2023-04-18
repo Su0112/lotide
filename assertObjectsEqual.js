@@ -4,7 +4,6 @@ function eqArrays(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
   }
-
   // Compare each element of the arrays
   for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] !== arr2[i]) {
@@ -14,7 +13,6 @@ function eqArrays(arr1, arr2) {
   // If all elements are equal, the arrays are equal
   return true;
 }
-
 const eqObjects = function(object1, object2) {
   let keys1 = Object.keys(object1);
   let keys2 = Object.keys(object2);
@@ -46,7 +44,9 @@ const object1 = { a: 1, b: 2 };
 const object2 = { b: 2, a: 1 };
 const object3 = { a: 1, b: 3 };
 
-assertObjectsEqual(object1, object2); // should pass
-assertObjectsEqual(object1, object3); // should fail
+assertObjectsEqual(object1, object2);
+// should pass
+assertObjectsEqual(object1, object3);
+// should fail
 
 module.exports = assertObjectsEqual;

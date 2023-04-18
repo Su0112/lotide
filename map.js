@@ -10,7 +10,6 @@ function eqArrays(arr1, arr2) {
       return false;
     }
   }
-
   // If all elements are equal, the arrays are equal
   return true;
 }
@@ -23,17 +22,13 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-
 //Implementation of map and call backs
 const words = ["ground", "control", "to", "major", "tom"];
 const map = function(array, callback) {
-  //console.log("array:", array)
-  //console.log("callback:", callback)
   const results = [];
   for (let item of array) {
-    // console.log("item BEFORE: ", item); // going through all the item
-    // console.log("item AFTER: ", callback(item)); // picking only 0th index of the item
-    results.push(callback(item)); //pushing 0th index of callback to the results
+    //pushing 0th index of callback to the results
+    results.push(callback(item));
   }
   return results;
 };
