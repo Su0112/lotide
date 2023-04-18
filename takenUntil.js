@@ -35,8 +35,6 @@ const takenUntil = function(array, callback) {
   }
   return result;
 };
-
-
 // Test Case 1
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takenUntil(data1, x => x < 0);

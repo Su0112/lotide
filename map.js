@@ -34,7 +34,7 @@ const map = function(array, callback) {
 };
 //a simple test by adding the following code below the map function definition:
 const results1 = map(words, (word) => word[0]);
-console.log(results1);
+
 
 // Test cases
 const words1 = ["ground", "control", "to", "major", "tom"];
