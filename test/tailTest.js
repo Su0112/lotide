@@ -6,6 +6,5 @@ describe("#tail", () => {
   it("returns 2 for given input", () => {
     assert.strictEqual(tail(input).length, 2);
   });
-
 });
 
